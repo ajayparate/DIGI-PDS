@@ -2,6 +2,8 @@ package com.digipds.scheme_commodity_service.entity;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,10 +30,12 @@ public class SchemeCommodity {
 
     @ManyToOne
     @JoinColumn(name = "scheme_id", nullable = false)
+    @JsonIgnore
     private Scheme scheme;
 
     @ManyToOne
     @JoinColumn(name = "commodity_id", nullable = false)
+    @JsonIgnore
     private Commodity commodity;
 
     private Double quantityPerPerson;
@@ -41,3 +45,4 @@ public class SchemeCommodity {
     private LocalDate effectiveFrom;
     private LocalDate effectiveTo;
 }
+//✅ Pagination or filtering setup if required we will do it later
