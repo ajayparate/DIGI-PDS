@@ -46,6 +46,7 @@ public class FairPriceShop {
      @Column(nullable = false)
     private Long assignedWarehouseId; // FK to Warehouse
 
+    @Builder.Default
     private Boolean isOperational = true;
 
     private LocalDateTime createdAt;

@@ -27,6 +27,7 @@ public class FairPriceShopRequest {
     private Integer maxDailyCustomers;
     private String operatingHours;
     private Long assignedWarehouseId;
+    @Builder.Default
     private Boolean isOperational = true;
 
 }
